@@ -3,22 +3,22 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import home from "./components/home";
-import currency from "./components/currency/currency";
-import emtia from "./components/emtia/emtia";
+import HomeView from "./components/home/home";
+import CurrencyView from "./components/currency/currency";
+import EmtiaView from "./components/emtia/emtia";
 
 const routes = [
   {
     path: "/",
-    component: home,
+    component: HomeView,
   },
   {
     path: "/currency",
-    component: currency,
+    component: CurrencyView,
   },
   {
     path: "/emtia",
-    component: emtia,
+    component: EmtiaView,
   },
   {
     path: "*",
