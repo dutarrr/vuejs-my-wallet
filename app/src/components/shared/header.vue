@@ -7,23 +7,36 @@
 
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <router-link to="/" tag="li" class="nav-item" active-class="active"
-            ><a class="nav-link">Home</a></router-link
-          >
-          <router-link
-            to="/currency"
-            tag="li"
-            class="nav-item"
-            active-class="active"
-            ><a class="nav-link">Döviz</a></router-link
-          >
-          <router-link
-            to="/emtia"
-            tag="li"
-            class="nav-item"
-            active-class="active"
-            ><a class="nav-link">Emtia</a></router-link
-          >
+          <li class="nav-item">
+            <router-link
+              to="/"
+              exact
+              tag="a"
+              class="nav-link"
+              active-class="active"
+              >Home</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link
+              to="/currency"
+              exact
+              tag="a"
+              class="nav-link"
+              active-class="active"
+              >Döviz</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link
+              to="/emtia"
+              exact
+              tag="li"
+              class="nav-link"
+              active-class="active"
+              >Emtia</router-link
+            >
+          </li>
         </ul>
       </div>
     </div>
