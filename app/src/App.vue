@@ -1,20 +1,18 @@
 <template>
   <div>
     <div class="container">
-      <a href="#" class="btn btn-primary">Primary</a>
-      <a href="#" class="btn btn-secondary">Secondary</a>
-      <a href="#" class="btn btn-success">Success</a>
-      <a href="#" class="btn btn-info">Info</a>
-      <a href="#" class="btn btn-warning">Warning</a>
-      <a href="#" class="btn btn-danger">Danger</a>
+      <header-app></header-app>
     </div>
   </div>
 </template>
 
 <script>
+import Header from "./components/header.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    headerApp: Header,
+  },
 };
 </script>
 
