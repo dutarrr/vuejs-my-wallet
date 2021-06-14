@@ -6,7 +6,7 @@
         <label for="alisKur" class="col-sm-2 col-form-label">Alış Kuru</label>
         <div class="col-sm-10">
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="alisKur"
             v-model="currency.alisKur"
@@ -17,7 +17,7 @@
         <label for="satisKur" class="col-sm-2 col-form-label">Satış Kuru</label>
         <div class="col-sm-10">
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="satisKur"
             v-model="currency.satisKur"
@@ -28,7 +28,7 @@
         <label for="alisTl" class="col-sm-2 col-form-label">Alış TL</label>
         <div class="col-sm-10">
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="alisTl"
             v-model="currency.alisTl"
@@ -39,7 +39,7 @@
         <label for="satisTl" class="col-sm-2 col-form-label">Satış TL</label>
         <div class="col-sm-10">
           <input
-            type="text"
+            type="number"
             class="form-control"
             id="satisTl"
             v-model="currency.satisTl"
@@ -48,16 +48,31 @@
       </div>
       <div class="mb-3 row">
         <label for="islemTip" class="col-sm-2 form-label">İşlem Tipi</label>
-        <div class="col-sm-10">
+        <div class="col-sm-5">
           <select
             class="form-select"
             aria-label="Default select example"
             id="islemTip"
             v-model="currency.islemTip"
           >
-            <option selected>Seçiniz..</option>
+            <option value="0" selected>Seçiniz..</option>
             <option value="1">Alış</option>
             <option value="2">Satış</option>
+          </select>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="islemTip" class="col-sm-2 form-label">Döviz Tipi</label>
+        <div class="col-sm-5">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="islemTip"
+            v-model="currency.currencyType"
+          >
+            <option value="0">Seçiniz..</option>
+            <option value="1">Dolar | $</option>
+            <option value="2">Euro | E</option>
           </select>
         </div>
       </div>
@@ -80,13 +95,14 @@ export default {
         satisKur: null,
         alisTl: null,
         satisTl: null,
-        islemTip: null,
+        islemTip: "0",
+        currencyType: "0",
       },
     };
   },
   methods: {
     add() {
-      console.log(this.curreny);
+      console.log(this.currency);
     },
   },
 };
