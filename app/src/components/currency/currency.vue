@@ -1,3 +1,12 @@
 <template>
-  <h1>currency</h1>
+  <add-form-app></add-form-app>
 </template>
+
+<script>
+import addform from "./addform.vue";
+export default {
+  components: {
+    addFormApp: addform,
+  },
+};
+</script>

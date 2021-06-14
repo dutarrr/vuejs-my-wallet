@@ -2,7 +2,8 @@
   <div>
     <div class="container">
       <header-app></header-app>
-      <router-view></router-view>
+      <div class="container mt-4 mb-4"><router-view></router-view></div>
+
       <footer-app></footer-app>
     </div>
   </div>
