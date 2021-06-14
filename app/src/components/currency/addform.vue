@@ -42,10 +42,24 @@
           </select>
         </div>
       </div>
+      <div class="mb-3 row">
+        <div class="col-sm-2">
+          <button class="btn btn-primary" @click="add">Kaydet</button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  methods: {
+    add() {
+      console.log("hi");
+    },
+  },
+};
+</script>
 
 <style>
 .card {
