@@ -1,8 +1,12 @@
 const axios = require("axios").default;
 
-const state = { currency: [] };
+const state = { currency: ["elma"] };
 
-const getters = {};
+const getters = {
+  getAllCurrency({ state }) {
+    return state.currency;
+  },
+};
 
 const mutations = {};
 

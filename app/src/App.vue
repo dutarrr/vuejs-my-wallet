@@ -2,6 +2,7 @@
   <div>
     <div class="container">
       <header-app></header-app>
+
       <div class="container mt-4 mb-4">
         <transition name="fade" mode="out-in">
           <router-view></router-view>

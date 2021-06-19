@@ -4,7 +4,7 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 import HomeView from "./components/home/home";
-import CurrencyView from "./components/currency/currency";
+import CurrencyView from "./components/currency/CurrencyView";
 import EmtiaView from "./components/emtia/emtia";
 
 const routes = [
