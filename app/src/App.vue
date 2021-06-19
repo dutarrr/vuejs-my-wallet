@@ -23,6 +23,9 @@ export default {
     headerApp: Header,
     footerApp: Footer,
   },
+  created() {
+    this.$store.dispatch("initApp");
+  },
 };
 </script>
 
@@ -33,8 +36,8 @@ export default {
 .fade-enter-active {
   transition: opacity 0.5s ease-out;
 }
-.fade-leave {
-}
+/* .fade-leave {
+} */
 .fade-leave-active {
   transition: opacity 0.5s ease-out;
   opacity: 0;
