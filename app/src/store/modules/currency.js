@@ -1,4 +1,5 @@
 const axios = require("axios").default;
+import { router } from "../../router";
 
 const state = { CurrencyList: [] };
 
@@ -31,10 +32,13 @@ const actions = {
         console.log("err :>> ", err);
       });
   },
-  addCurrency({ state }, currency) {
+  addCurrency({ state, commit }, currency) {
     console.log(state);
     axios.post("currency.json", currency).then((response) => {
       console.log("response :>> ", response);
+      currency.id = response.data.name;
+      commit("addCurrencyToStateList", currency);
+      router.replace("currency-list");
     });
   },
 };
