@@ -102,7 +102,6 @@ export default {
   },
   methods: {
     add() {
-      //console.log(this.currency);
       this.$store.dispatch("addCurrency", this.currency);
     },
   },

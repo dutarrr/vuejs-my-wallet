@@ -9,6 +9,8 @@
           <th scope="col">Satış TL</th>
           <th scope="col">Alış Kur</th>
           <th scope="col">Satış Kur</th>
+          <th scope="col">İşlem Tipi</th>
+          <th scope="col">Döviz Cinsi</th>
         </tr>
       </thead>
       <tbody>
@@ -18,6 +20,8 @@
           <td>{{ currency.satisTl }}</td>
           <td>{{ currency.alisKur }}</td>
           <td>{{ currency.satisKur }}</td>
+          <td>{{ currency.islemTip == 1 ? "Alış" : "Satış" }}</td>
+          <td>{{ currency.currencyType == 1 ? "Dolar" : "Euro" }}</td>
         </tr>
       </tbody>
     </table>
