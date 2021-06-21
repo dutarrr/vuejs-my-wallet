@@ -29,7 +29,7 @@ const actions = {
     axios.post("currency.json", currency).then((response) => {
       currency.id = response.data.name;
       commit("addCurrencyToStateList", currency);
-      router.replace("currency-list");
+      router.replace("currency/list");
     });
   },
 };

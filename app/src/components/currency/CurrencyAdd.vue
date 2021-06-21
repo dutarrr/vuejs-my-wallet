@@ -46,7 +46,7 @@
           />
         </div>
       </div>
-      <div class="mb-3 row">
+      <!-- <div class="mb-3 row">
         <label for="islemTip" class="col-sm-2 form-label">İşlem Tipi</label>
         <div class="col-sm-5">
           <select
@@ -60,7 +60,7 @@
             <option value="2">Satış</option>
           </select>
         </div>
-      </div>
+      </div> -->
       <div class="mb-3 row">
         <label for="islemTip" class="col-sm-2 form-label">Döviz Tipi</label>
         <div class="col-sm-5">
@@ -95,7 +95,7 @@ export default {
         satisKur: null,
         alisTl: null,
         satisTl: null,
-        islemTip: "0",
+        // islemTip: "0",
         currencyType: "0",
       },
     };
