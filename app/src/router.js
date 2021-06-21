@@ -5,7 +5,8 @@ Vue.use(VueRouter);
 
 import HomeView from "./components/home/home";
 import CurrencyView from "./components/currency/CurrencyView";
-import AddCurrency from "./components/currency/AddCurrency";
+import CurrencyAdd from "./components/currency/CurrencyAdd";
+import CurrencyList from "./components/currency/CurrencyList";
 import EmtiaView from "./components/emtia/emtia";
 
 const routes = [
@@ -14,12 +15,13 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/currency-list",
+    path: "/currency",
     component: CurrencyView,
-  },
-  {
-    path: "/currency-add",
-    component: AddCurrency,
+    children: [
+      { path: "", component: CurrencyList },
+      { path: "add", component: CurrencyAdd },
+      { path: "list", component: CurrencyList },
+    ],
   },
   {
     path: "/emtia",

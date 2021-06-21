@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     gotoAdd() {
-      this.$router.push({ path: "/currency-add" });
+      this.$router.push({ path: "/currency/add" });
     },
   },
 };
