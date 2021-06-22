@@ -3,50 +3,28 @@
     <div class="card-header text-center">Döviz İşlemleri</div>
     <div class="card-body">
       <div class="mb-3 row">
-        <label for="alisKur" class="col-sm-2 col-form-label">Alış Kuru</label>
+        <label for="alisKur" class="col-sm-2 col-form-label">Kur</label>
         <div class="col-sm-10">
           <input
             type="number"
             class="form-control"
             id="alisKur"
-            v-model="currency.alisKur"
+            v-model="currency.kur"
           />
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="satisKur" class="col-sm-2 col-form-label">Satış Kuru</label>
+        <label for="tutar" class="col-sm-2 col-form-label">Tutar</label>
         <div class="col-sm-10">
           <input
             type="number"
             class="form-control"
-            id="satisKur"
-            v-model="currency.satisKur"
+            id="tutar"
+            v-model="currency.tutar"
           />
         </div>
       </div>
       <div class="mb-3 row">
-        <label for="alisTl" class="col-sm-2 col-form-label">Alış TL</label>
-        <div class="col-sm-10">
-          <input
-            type="number"
-            class="form-control"
-            id="alisTl"
-            v-model="currency.alisTl"
-          />
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="satisTl" class="col-sm-2 col-form-label">Satış TL</label>
-        <div class="col-sm-10">
-          <input
-            type="number"
-            class="form-control"
-            id="satisTl"
-            v-model="currency.satisTl"
-          />
-        </div>
-      </div>
-      <!-- <div class="mb-3 row">
         <label for="islemTip" class="col-sm-2 form-label">İşlem Tipi</label>
         <div class="col-sm-5">
           <select
@@ -60,7 +38,7 @@
             <option value="2">Satış</option>
           </select>
         </div>
-      </div> -->
+      </div>
       <div class="mb-3 row">
         <label for="islemTip" class="col-sm-2 form-label">Döviz Tipi</label>
         <div class="col-sm-5">
@@ -91,11 +69,9 @@ export default {
   data() {
     return {
       currency: {
-        alisKur: null,
-        satisKur: null,
-        alisTl: null,
-        satisTl: null,
-        // islemTip: "0",
+        kur: null,
+        tutar: null,
+        islemTip: "0",
         currencyType: "0",
       },
     };

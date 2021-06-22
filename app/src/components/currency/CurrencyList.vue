@@ -7,12 +7,9 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Alış</th>
-          <th scope="col">Satış</th>
-          <th scope="col">Kar-Zarar</th>
-          <th scope="col">Alış Kur</th>
-          <th scope="col">Satış Kur</th>
-          <!-- <th scope="col">İşlem Tipi</th> -->
+          <th scope="col">Tutar</th>
+          <th scope="col">Kur</th>
+          <th scope="col">İşlem Tipi</th>
           <th scope="col">Döviz Cinsi</th>
         </tr>
       </thead>
@@ -23,13 +20,9 @@
           :class="currency.islemTip == 1 ? 'table-success' : 'table-warning'"
         >
           <th scope="row">{{ currency.id }}</th>
-          <td>{{ currency.alisTl | tlFormat }}</td>
-          <td>{{ currency.satisTl | tlFormat }}</td>
-          <td>{{ (currency.alisTl - currency.satisTl) | tlFormat }}</td>
-
-          <td>{{ currency.alisKur | kurFormat }}</td>
-          <td>{{ currency.satisKur | kurFormat }}</td>
-          <!-- <td>{{ currency.islemTip == 1 ? "Alış" : "Satış" }}</td> -->
+          <td>{{ currency.tutar | tlFormat }}</td>
+          <td>{{ currency.kur | kurFormat }}</td>
+          <td>{{ currency.islemTip == 1 ? "Alış" : "Satış" }}</td>
           <td>{{ currency.currencyType == 1 ? "Dolar" : "Euro" }}</td>
         </tr>
       </tbody>
