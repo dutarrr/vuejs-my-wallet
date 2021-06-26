@@ -3,15 +3,18 @@ const axios = require("axios").default;
 const state = {
   emtias: [],
 };
-const getters = {};
+const getters = {
+  getAllEmtiaList(state) {
+    return state.emtias;
+  },
+};
 const mutations = {};
 const actions = {
   addEmtia({ state }, emtia) {
-    console.log(state);
-    console.log(emtia.kur);
-
     axios.post("emtia.json", emtia).then((response) => {
-      console.log(response);
+      emtia.id = response.data.name;
+      state.emtias.push(emtia);
+      console.log(state.emtias);
     });
   },
 };

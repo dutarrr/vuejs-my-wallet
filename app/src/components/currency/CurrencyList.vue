@@ -38,9 +38,6 @@ export default {
   created() {},
   computed: {
     ...mapGetters(["getAllCurrency"]),
-    // backgroundColor: function () {
-    //   return "table-success";
-    // },
   },
   methods: {
     gotoAdd() {
