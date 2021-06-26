@@ -14,5 +14,6 @@ export default {
     emtiaAdd: EmtiaAddForm,
     emtiaList: EmtiaList,
   },
+  created() {},
 };
 </script>

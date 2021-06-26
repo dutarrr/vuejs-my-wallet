@@ -7,8 +7,11 @@
 </template>
 
 <script>
+//import { mapGetters } from "vuex";
 export default {
   components: {},
+  computed: {},
+  created() {},
 };
 </script>
 

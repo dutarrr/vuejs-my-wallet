@@ -15,7 +15,7 @@
       </thead>
       <tbody>
         <tr
-          v-for="currency in getAllCurrency"
+          v-for="currency in getAllCurrencyList"
           :key="currency.id"
           :class="currency.islemTip == 1 ? 'table-success' : 'table-warning'"
         >
@@ -37,7 +37,7 @@ import { mapGetters } from "vuex";
 export default {
   created() {},
   computed: {
-    ...mapGetters(["getAllCurrency"]),
+    ...mapGetters(["getAllCurrencyList"]),
   },
   methods: {
     gotoAdd() {

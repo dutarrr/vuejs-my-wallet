@@ -24,7 +24,9 @@ export default {
     footerApp: Footer,
   },
   created() {
-    this.$store.dispatch("initApp");
+    //this.$store.dispatch("initApp");
+    this.$store.dispatch("initEmtiaApp");
+    this.$store.dispatch("initCurrencyApp");
   },
 };
 </script>

@@ -4,7 +4,7 @@ import { router } from "../../router/router";
 const state = { CurrencyList: [] };
 
 const getters = {
-  getAllCurrency(state) {
+  getAllCurrencyList(state) {
     return state.CurrencyList;
   },
 };
@@ -16,7 +16,9 @@ const mutations = {
 };
 
 const actions = {
-  initApp({ commit }) {
+  initCurrencyApp({ commit }) {
+    console.log("Currency İnit App");
+
     axios.get("currency.json").then((response) => {
       let data = response.data;
       for (let key in data) {

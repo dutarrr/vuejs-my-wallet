@@ -4,10 +4,15 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 import Home from "../views/Home";
-import Currency from "../views/Currency";
+
+//import Currency from "../views/Currency";
+const Currency = () => import("../views/Currency"); //lazy load
+
 import CurrencyAdd from "../components/currency/CurrencyAdd";
 import CurrencyList from "../components/currency/CurrencyList";
-import Emtia from "../views/Emtia";
+
+//import Emtia from "../views/Emtia";
+const Emtia = () => import("../views/Emtia"); //lazy load
 
 const routes = [
   {
@@ -26,6 +31,7 @@ const routes = [
   {
     path: "/emtia",
     component: Emtia,
+    name: "Emtia",
   },
   {
     path: "*",
